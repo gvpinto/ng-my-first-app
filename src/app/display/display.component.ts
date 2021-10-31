@@ -14,6 +14,6 @@ export class DisplayComponent implements OnInit {
 
   onDisplayClick() {
     this.display = !this.display;
-    this.logs.push(this.logs.length + 1);
+    this.logs.push(new Date());
   }
 }

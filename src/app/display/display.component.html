@@ -7,11 +7,11 @@
       <p *ngIf="display; else nodisplay">My Name is Glenn</p>
       <ng-template #nodisplay> <p>***********</p> </ng-template>
       <p
-        *ngFor="let logItem of logs"
+        *ngFor="let logItem of logs; let i = index"
         [ngStyle]="{
-          'background-color': logItem >= 5 ? 'blue' : 'transparent'
+          'background-color': i >= 4 ? 'blue' : 'transparent'
         }"
-        [ngClass]="{'white-text': logItem >= 5}"
+        [ngClass]="{ 'white-text': i >= 4 }"
       >
         {{ logItem }}
       </p>
