@@ -16,12 +16,9 @@
 
 <!-- <p>{{ serverCreationStatus }}</p> -->
 
-<p *ngIf="serverCreated; else noserver">
+<p *ngIf="serverCreated">
   The server has been created. The server name is {{ serverName }}
 </p>
-<ng-template #noserver>
-  <p>No Server was Created</p>
-</ng-template>
 
 <app-server></app-server>
 <app-server></app-server>

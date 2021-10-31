@@ -1,4 +1,7 @@
-<p>{{ "Server" }} with ID {{ serverId }} is currently {{ serverStatus }}</p>
-<!-- <p>
+<!-- <p>{{ "Server" }} with ID {{ serverId }} is currently {{ serverStatus }}</p> -->
+<!-- <p [ngStyle]="{ 'background-color': getStatusColor() }">
   {{ "Server" }} with ID {{ serverId }} is currently {{ getServerStatus() }}
 </p> -->
+<p [ngStyle]="{ backgroundColor: getStatusColor() }">
+  {{ "Server" }} with ID {{ serverId }} is currently {{ getServerStatus() }}
+</p>
