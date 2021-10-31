@@ -2,6 +2,9 @@
 <!-- <p [ngStyle]="{ 'background-color': getStatusColor() }">
   {{ "Server" }} with ID {{ serverId }} is currently {{ getServerStatus() }}
 </p> -->
-<p [ngStyle]="{ backgroundColor: getStatusColor() }">
+<p
+  [ngStyle]="{ backgroundColor: getStatusColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
   {{ "Server" }} with ID {{ serverId }} is currently {{ getServerStatus() }}
 </p>
