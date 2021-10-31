@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onDisplayClick()">
+        Display Details
+      </button>
+      <p *ngIf="display; else nodisplay">My Name is Glenn</p>
+      <ng-template #nodisplay> <p>***********</p> </ng-template>
+      <p
+        *ngFor="let logItem of logs"
+        [ngStyle]="{
+          'background-color': logItem >= 5 ? 'blue' : 'transparent'
+        }"
+        [ngClass]="{'white-text': logItem >= 5}"
+      >
+        {{ logItem }}
+      </p>
+    </div>
+  </div>
+</div>
